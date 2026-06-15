@@ -9,13 +9,9 @@
                 <field name="marca"/>
                 <field name="color"/>
                 <field name="material"/>
-                <field name="genero"/>
-                <field name="tipo_calzado"/>
                 <field name="stock_minimo"/>
                 <field name="descuento"/>
-                <field name="porcentaje_descuento"/>
                 <field name="valor_inventario" readonly="1"/>
-                <field name="precio_final" readonly="1"/>
                 <field name="descripcion"/>
             </xpath>
         </field>
@@ -30,11 +26,8 @@
                 <field name="codigo"/>
                 <field name="marca"/>
                 <field name="color"/>
-                <field name="genero"/>
-                <field name="tipo_calzado"/>
                 <field name="descuento"/>
                 <field name="valor_inventario"/>
-                <field name="precio_final"/>
             </xpath>
         </field>
     </record>
