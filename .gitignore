@@ -4,6 +4,8 @@
 !zapatos/**
 !zapatos_extension/
 !zapatos_extension/**
+!zapatos_devoluciones/
+!zapatos_devoluciones/**
 **/_pycache_/
 *.pyc
 *.pyo
