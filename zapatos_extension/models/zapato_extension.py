@@ -19,3 +19,4 @@ class ZapatosZapato(models.Model):
     def _compute_valor_inventario(self):
         for barrido in self:
             barrido.valor_inventario = barrido.precio * barrido.stock
+    
