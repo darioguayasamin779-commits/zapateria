@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_zapato_form_extension" model="ir.ui.view">
+        <field name="name">zapatos.zapato.form.extension</field>
+        <field name="model">zapatos.zapato</field>
+        <field name="inherit_id" ref="zapatos.view_zapato_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <field name="codigo"/>
+                <field name="marca"/>
+                <field name="color"/>
+                <field name="material"/>
+                <field name="genero"/>
+                <field name="tipo_calzado"/>
+                <field name="stock_minimo"/>
+                <field name="descuento"/>
+                <field name="porcentaje_descuento"/>
+                <field name="valor_inventario" readonly="1"/>
+                <field name="precio_final" readonly="1"/>
+                <field name="descripcion"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_zapato_list_extension" model="ir.ui.view">
+        <field name="name">zapatos.zapato.list.extension</field>
+        <field name="model">zapatos.zapato</field>
+        <field name="inherit_id" ref="zapatos.view_zapato_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field name="codigo"/>
+                <field name="marca"/>
+                <field name="color"/>
+                <field name="genero"/>
+                <field name="tipo_calzado"/>
+                <field name="descuento"/>
+                <field name="valor_inventario"/>
+                <field name="precio_final"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
