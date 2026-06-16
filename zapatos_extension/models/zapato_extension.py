@@ -3,20 +3,22 @@ from odoo import models, fields, api
 class ZapatosZapato(models.Model):
     _inherit = 'zapatos.zapato'
 
-    codigo = fields.Char(string='codigo')
-    marca = fields.Char(string='marca')
-    color = fields.Char(string='color')
-    material = fields.Char(string='material')
-    descripcion = fields.Text(string='descripcion')
-    stock_minimo = fields.Integer(string='stock_minimo', default=5)
-    descuento= fields.Boolean(string = 'descuento', default = False)
+    codigo = fields.Char(string='Còdigo')
+    marca = fields.Char(string='Marca')
+    color = fields.Char(string='Color')
+    material = fields.Char (string='Material')
+    descripcion = fields.Text(string = 'Descripciòn')
+    stock_minimo = fields.Integer(string = 'Stock Minimo', default = 5)
+
     valor_inventario = fields.Float(
-        string='valor_inventario', 
-        compute='_compute_valor_inventario', 
+        string ='Valor_inventario',
+        compute = '_compute_valor_inventario',
         store = True
     )
-    @api.depends('precio', 'stock')
+
+    @api.depends('precio','stock')
     def _compute_valor_inventario(self):
-        for barrido in self:
-            barrido.valor_inventario = barrido.precio * barrido.stock
-    
+        for record in self:
+            record.valor_inventario = record.precio * record.stock 
+
+            
